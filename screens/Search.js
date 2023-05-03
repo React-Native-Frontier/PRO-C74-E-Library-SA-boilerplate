@@ -25,7 +25,7 @@ export default class SearchScreen extends Component {
 	};
 
 	getTransactions = async () => {
-		let dbQuery = query(collection(db, 'transactions'), limit(10));
+		let dbQuery = query(collection(db, 'transactions'));
 
 		let querySnapShot = await getDocs(dbQuery);
 
